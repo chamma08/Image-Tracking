@@ -18,32 +18,23 @@
       embedded
       gesture-detector
     >
+      <!-- Add the a-nft element here -->
+      <a-nft
+        type="nft"
+        url="target_file/targets.mind"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+        <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+      </a-nft>
+
       <a-assets>
         <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
       </a-assets>
 
-      <a-marker
-        id="animated-marker"
-        type="pattern"
-        preset="custom"
-        url="assets/marker.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          id="bowser-model"
-          scale="3 3 3"
-          position="0 0 0"
-          rotation="270 0 0"
-          animation-mixer="loop: repeat"
-          gltf-model="#animated-asset"
-          class="clickable"
-          gesture-handler
-        ></a-entity>
-      </a-marker>
-
+      <!-- The marker and model are removed, as you no longer want to use them -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>
